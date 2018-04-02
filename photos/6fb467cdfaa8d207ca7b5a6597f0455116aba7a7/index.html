@@ -4,6 +4,8 @@
 <title>Josie and Matt Wedding Photos</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="outline.css" rel="stylesheet" type="text/css">
+<script src="outline.js"></script>
 
 </head>
 
@@ -56,21 +58,58 @@ div.vertical {
 }
 
 a:link {
-    color: peachpuff;
+    color: navy;
 }
 
 a:visited {
-    color: gray;
+    color: purple;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 </style>
 
-<body style="font-family: Arial, Helvetica, sans-serif;">
+<body style="font-family: Arial, Helvetica, sans-serif;"; onLoad="outlineInit()">
 
-  
 <hr>
-<br>
-<a href="https://photos.app.goo.gl/Lkh15paPH7Ax5EI13" target="_blank">Josie and Matt Wedding Photos</a><br>
+
+<button class="accordion"><a href="https://photos.app.goo.gl/Lkh15paPH7Ax5EI13" target="_blank">All Photos</a></button>
+<div class="panel">
 <br>
 <br>
 <a href="https://photos.app.goo.gl/KEU3aWJREGdjShKg2" target="_blank">Engagement Photos</a><br>
@@ -88,16 +127,10 @@ a:visited {
 <a href="https://photos.app.goo.gl/Nz18rwtNyGQkg7oH2" target="_blank">Reception</a><br>
 <br>
 <br>
-<a href="https://drive.google.com/open?id=1L_Bp4augiD2S_T5BgzmUIdsTbFn2H-Qo" target="_blank">Engagement Photos (ZIP Download)</a><br>
-<br>
-<br>
-<a href="https://drive.google.com/open?id=17UHHe60z6Fs3-9QiuObspTV9KD8na58t" target="_blank">Rehearsal Dinner (ZIP Download)</a><br>
-<br>
-<br>
-<a href="https://drive.google.com/open?id=1BbNioeW8D7usUpBjCWUfQE3jusnLnzHi" target="_blank">Wedding Day (ZIP Download)</a><br>
-<br>
-<br>
-<a href="https://www.youtube.com/playlist?list=PLrbK6yNGh7lqIFaiQUf2-MeJ1ir07DlV0" target="_blank">Wedding DVD Playlist</a><br>
+</div>
+
+<button class="accordion"><a href="https://www.youtube.com/playlist?list=PLrbK6yNGh7lqIFaiQUf2-MeJ1ir07DlV0" target="_blank">Wedding DVD Videos</a></button>
+<div class="panel">
 <br>
 <br>
 <a href="https://youtu.be/wtvt0Urckp0" target="_blank">Wedding Mass</a><br>
@@ -118,9 +151,119 @@ a:visited {
 <a href="https://youtu.be/wGZxJtDia9U" target="_blank">Reception Slideshow</a><br>
 <br>
 <br>
-<a href="https://www.youtube.com/watch?v=mPxIzh3iX7s&list=PLrbK6yNGh7lp4XINYYPsUEaTdqiUBFhzv" target="_blank">Papal Audience</a><br>
+</div>
+
+<button class="accordion">Papal Audience</button>
+<div class="panel">
 <br>
 <br>
+<a href="https://photos.app.goo.gl/Sp67CjXFA4qC7es83" target="_blank">Photos (Josie & Matt)</a><br>
+<br>
+<br>
+<a href="https://www.youtube.com/watch?v=mPxIzh3iX7s&list=PLrbK6yNGh7lp4XINYYPsUEaTdqiUBFhzv" target="_blank">Audience Video</a><br>
+<br>
+<br>
+</div>
+
+<button class="accordion">ZIP Downloads</button>
+<div class="panel">
+<br>
+<br>
+<a href="https://drive.google.com/open?id=1L_Bp4augiD2S_T5BgzmUIdsTbFn2H-Qo" target="_blank">Engagement Photos (ZIP Download)</a><br>
+<br>
+<br>
+<a href="https://drive.google.com/open?id=17UHHe60z6Fs3-9QiuObspTV9KD8na58t" target="_blank">Rehearsal Dinner (ZIP Download)</a><br>
+<br>
+<br>
+<a href="https://drive.google.com/open?id=1BbNioeW8D7usUpBjCWUfQE3jusnLnzHi" target="_blank">Wedding Day (ZIP Download)</a><br>
+<br>
+<br>
+</div>
+
+<button class="accordion">Sorted Albums</button>
+<div class="panel">
+<br>
+<ul class="outline">
+  <li><a href="https://photos.app.goo.gl/VjN9kdLx7GJyyBmu2" target="_blank">Gallardo Family</a><br><br>
+    <ul>
+      <li><a href="https://photos.app.goo.gl/U0OPeJsSTOGB40KJ2" target="_blank">Humberto & Maria</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/KTwRl1johhSrlZyy1" target="_blank">Sandra, David, & Marcelo</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/ZR8AdlO3zI3gf6Mo1" target="_blank">Madrina & Margarita</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/gAh2kCS4VZU9FeE82" target="_blank">Amy & Phil</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/VStlVdQ7dTJwYpJy1" target="_blank">Smith Family</a><br><br></li>
+    </ul>
+  </li>
+  <li><a href="https://photos.app.goo.gl/Ejz5LCZUqwgBNXsk2" target="_blank">Van Kirk Family</a><br><br>
+    <ul>
+      <li><a href="https://photos.app.goo.gl/fsQI7xJ3GTeh4hpz1" target="_blank">Steve & Janice</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/ErDY4ZCGH7LKsv4w1" target="_blank">Michael & Haleigh</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/C4y99s8lAZKP7O5m1" target="_blank">Mark & Cindy</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/A9w9mCkg9GXZelaF3" target="_blank">Joanie</a><br><br></li>
+      <li><a href="https://photos.app.goo.gl/WxCC8VTo6zTJBrEO2" target="_blank">Cossette Family</a><br><br>
+        <ul>
+            <li><a href="https://photos.app.goo.gl/fsY0Kg4OzlPwcKKL2" target="_blank">Grandma Lorraine</a><br><br></li>
+            <li><a href="https://photos.app.goo.gl/c8GqiRpatU4fBRgD2" target="_blank">Luke & Kathy</a><br><br></li>
+            <li><a href="https://photos.app.goo.gl/4YKH8nsZ6CKbr1jR2" target="_blank">Joe & Lisa</a><br><br></li>
+            <li><a href="https://photos.app.goo.gl/ZqSAUvxZNggbNk6t1" target="_blank">Katie</a><br><br></li>
+        </ul>
+      </li>
+    </ul>
+  <li><a href="https://photos.app.goo.gl/yuLNVvlXksOOQBto1" target="_blank">Fr. Matt</a><br><br></li>
+  <li><a href="https://photos.app.goo.gl/RUT6YBUDhIsfi4op2" target="_blank">Amy & Rose</a><br><br></li>
+  <li><a href="https://photos.app.goo.gl/CfNpQBwMgQKzpf5D2" target="_blank">Diana, Will, & Miles</a><br><br></li>
+  <li><a href="https://photos.app.goo.gl/Z0KJMyyxszZZdRLk1" target="_blank">Super Hooper</a><br><br></li>
+  <li><a href="https://photos.app.goo.gl/zpW098To2JnWGfp22" target="_blank">Westwood Charter</a><br><br></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
 <hr>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
 </body>
 </html>
